@@ -3,6 +3,8 @@
  */
 package com.kination.memento;
 
+import picocli.CommandLine;
+
 /**
  * Main class
  *
@@ -19,6 +21,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Main().getGreeting());
+        int exitCode = new CommandLine(new ListFunction()).execute(args);
+        System.exit(exitCode);
     }
 }

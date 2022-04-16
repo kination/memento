@@ -1,5 +1,6 @@
 package com.kination.memento;
 
+import com.slack.api.Slack;
 import picocli.CommandLine;
 
 import java.util.concurrent.Callable;
@@ -11,7 +12,13 @@ public class ListFunction implements Callable {
     public Object call() {
         switch (type) {
             case "slack":
-                // TODO:
+                try {
+                    SlackConnector sc = new SlackConnector(System.getenv("SLACK_TOKEN"));
+                    System.out.println("[Messages]");
+                    sc.getList().forEach(System.out::println);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 break;
             case "gmail":
                 // TODO:
