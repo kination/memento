@@ -13,15 +13,24 @@ plugins {
 
 repositories {
     // Use JCenter for resolving dependencies.
-    jcenter()
+    mavenCentral()
+//    jcenter()
 }
 
 dependencies {
     // Use JUnit test framework.
     testImplementation 'junit:junit:4.13'
 
-    // This dependency is used by the application.
+    // For CLI
     implementation 'info.picocli:picocli:4.6.3'
+
+    // For slack connector
+    implementation 'com.slack.api:slack-api-client:1.21.2'
+
+    // For gmail connector
+    implementation 'com.google.api-client:google-api-client:1.33.0'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.32.1'
+    implementation 'com.google.apis:google-api-services-gmail:v1-rev20211108-1.32.1'
 }
 
 application {

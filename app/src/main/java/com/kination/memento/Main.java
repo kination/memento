@@ -3,6 +3,16 @@
  */
 package com.kination.memento;
 
+/**
+ * Main class
+ *
+ * function list
+ *
+ * - --list : list-up all of my comments in last x day
+ * - --find <keyword> : filter my comments which includes <keyword>
+ * - --open ??
+ *
+ */
 public class Main {
     public String getGreeting() {
         return "Hello World!";

@@ -1,8 +1,3 @@
-## memento
-remind what you've said
-
-- slack
-- jira
-- gmail
-- and more...
+## memento (WIP)
+remind what you said...
 
